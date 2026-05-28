@@ -3,7 +3,7 @@ const path = require('path');
 
 const content = `export const environment = {
   production: true,
-  mapboxToken: '${process.env.MAP_BOX || ''}'
+  mapbox: '${process.env.MAP_BOX || ''}'
 };
 `;
 
