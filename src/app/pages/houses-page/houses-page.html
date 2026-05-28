@@ -6,11 +6,11 @@
 </section>
 
 
-<section class=" px-4 grid grid-cols-1  sm:grid-cols-2 xl:grid-cols-3">
+<section class="px-4 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
 
 
   @for(house of houses(); track house.id; let i = $index){
-    <div class="card bg-base-100  shadow-sm rounded-t-md overflow-hidden">
+    <div class="card bg-base-100 shadow-sm rounded-lg overflow-hidden p-2 cursor-pointer">
   <app-minimap-component [lngLat]="house.lngLat" [zoom]="15"></app-minimap-component>
   <div class="card-body">
     <h2 class="card-title">
