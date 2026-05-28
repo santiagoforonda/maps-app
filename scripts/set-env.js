@@ -7,13 +7,15 @@ const targetPath = "./src/environments/environment.ts"
 const targetPathDev = "./src/environments/environment.development.ts"
 
 
-if(!process.env["MAP_BOX"]){
-throw new Error("MAPBOX es required")
+const mapBox = process.env["MAP_BOX"] || "";
+
+if (!mapBox) {
+console.warn("MAP_BOX no está definido; generando variables vacías.");
 }
 
 const envFileContent = `
   export const environment = {
-  mapbox:"${process.env["MAP_BOX"]}"
+  mapbox:"${mapBox}"
 };
 `
 
